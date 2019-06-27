@@ -9,23 +9,39 @@ import Media from 'react-bulma-components/lib/components/media';
 import Tag from 'react-bulma-components/lib/components/tag';
 
 class SongBox extends Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            showLyrics: false
+        }
+    }
 	render(){
 		return(
             <Box>
                 <Media>
-                <Media.Item renderAs="figure" position="left">
-                    <Image renderAs="p" size={128} alt="album cover!" src={this.props.albumArt} />
-                </Media.Item>
-                <Media.Item>
-                    <Content>
-                        <Heading>{this.props.songTitle} <small>by {this.props.artist}</small></Heading>
-                        <p>
-                        <Tag color="danger">Angery</Tag> <Tag><span>Polarity:</span><strong>{this.props.polarity}</strong></Tag>
-                        </p>
-                    </Content>
-                    <Button link>Show Lyric Analysis</Button>
-                </Media.Item>
+                    <Media.Item position="left">
+                        <Image size={128} alt="album cover!" src={this.props.songInfo.img_url} />
+                    </Media.Item>
+                    <Media.Item>
+                        <Content>
+                            <Heading>{this.props.songInfo.title} <small>by {this.props.songInfo.artist}</small></Heading>
+                            <Tag.Group>
+                                {
+                                    this.props.songInfo.sentiment.score > 0 ? <Tag color="success">good vibes</Tag> : <Tag color="danger">angery reacts</Tag>
+                                }
+                                <Tag><span>comparative:</span><strong>{this.props.songInfo.sentiment.comparative.toFixed(4)}</strong></Tag>
+                                <Tag><span>raw score:</span><strong>{this.props.songInfo.sentiment.score}</strong></Tag>
+                            </Tag.Group>
+                        </Content>
+                        <Button onClick={() => this.setState({showLyrics: !this.state.showLyrics})}>lyric analysis</Button>
+                    </Media.Item>
                 </Media>
+                {
+                    this.state.showLyrics &&
+                    <Content className="display-linebreak">
+                        {this.props.songInfo.lyrics}
+                    </Content>
+                }
             </Box>
 		)
 	}

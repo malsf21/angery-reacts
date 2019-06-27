@@ -7,7 +7,8 @@
     "react": "^16.8.6",
     "react-bulma-components": "^2.3.0",
     "react-dom": "^16.8.6",
-    "react-scripts": "3.0.1"
+    "react-scripts": "3.0.1",
+    "sentiment": "^5.0.1"
   },
   "scripts": {
     "start": "NODE_PATH=./src react-scripts start",
