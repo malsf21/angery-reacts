@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 
 import Level from 'react-bulma-components/lib/components/level';
 import { Field, Control, Input } from 'react-bulma-components/lib/components/form';
-import Heading from 'react-bulma-components/lib/components/heading';
 import Button from 'react-bulma-components/lib/components/button';
 import Loader from 'react-bulma-components/lib/components/loader';
 
