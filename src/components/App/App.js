@@ -86,7 +86,7 @@ class App extends Component {
             <p>
               <b>raw score</b>: a sum of all the weights of the words in a song (where a positive weight is a positive word, and negative is negative)
               <br />
-              <b>comparative</b>: raw score divided by total number of words in song, ranges from -1.0 to 1.0
+              <b>comparative</b>: raw score divided by total number of words in song, ranges from -5.0 to 5.0
             </p>
             <Heading subtitle color="danger">
                 {this.state.error}
