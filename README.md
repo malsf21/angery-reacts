@@ -45,3 +45,6 @@ To create a production build, use yarn build.
 
 A window should pop up automatically with the frontend running! If you run into any issues, feel free to [drop me an issue](https://github.com/malsf21/angery-reacts/issues) and I'll do my best to help you out.
 
+## deploying to gh-pages
+
+Instead of using Travis CI like I normally do, I opted to use the `gh-pages` npm package. Configure the `homepage` key in `package.json` so React will know what URL to route from, and then just do `npm run deploy` or `yarn run deploy` - everything should work out of the box!

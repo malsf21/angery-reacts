@@ -32,6 +32,9 @@ class App extends Component {
       "artist": artist
     };
     let url = process.env.REACT_APP_ANGERY_REACTS_SERVER_URL;
+    if (url === undefined || url === null){
+      url = "https://angery-reacts-api.herokuapp.com/lyrics";
+    }
     fetch(url, {
       method: 'POST',
       body: JSON.stringify(data),
