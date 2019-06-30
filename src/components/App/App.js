@@ -70,7 +70,7 @@ class App extends Component {
             <Container>
               <Heading><span role="img" aria-label="angry react!">😡</span> angery reacts</Heading>
               <Heading subtitle>
-                figure out how angry your music library is
+                figure out how positive/negative your music library is
               </Heading>
             </Container>
           </Hero.Body>
@@ -81,6 +81,11 @@ class App extends Component {
               loading={this.state.loading} 
               handleSongSubmit={(title, artist) => this.handleSongSubmit(title, artist)}
             ></SearchSong>
+            <p>
+              <b>raw score</b>: a sum of all the weights of the words in a song (where a positive weight is a positive word, and negative is negative)
+              <br />
+              <b>comparative</b>: raw score divided by total number of words in song, ranges from -1.0 to 1.0
+            </p>
             <Heading subtitle color="danger">
                 {this.state.error}
             </Heading>
@@ -90,8 +95,13 @@ class App extends Component {
         </Section>
         <Footer>
           <Container>
-            <Content className="text-center">
-              built by matt wang!
+            <Content className="has-text-centered">
+              <p>
+                built by <a href="https://matthewwang.me" target="_blank" rel="noopener noreferrer">matt wang!</a>
+              </p>
+              <p>
+                uses <a href="https://reactjs.org" target="_blank" rel="noopener noreferrer">react</a>, <a href="https://bulma.io/" target="_blank" rel="noopener noreferrer">bulma</a>, <a href="https://www.npmjs.com/package/sentiment" target="_blank" rel="noopener noreferrer">sentiment</a>, and the <a href="https://docs.genius.com/" target="_blank" rel="noopener noreferrer">genius api</a>
+              </p>
             </Content>
           </Container>
         </Footer>

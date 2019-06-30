@@ -7,7 +7,7 @@ class SongsList extends Component {
 	render(){
         if (this.props.songs.length === 0){
             return(
-                <Heading>it's empty. why not search something?</Heading>
+                <Heading className="has-text-centered" style={{"marginTop": "5em", "marginBottom": "5em"}}>it's empty. why not search something?</Heading>
             );
         }
         return(
