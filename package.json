@@ -16,8 +16,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "predeploy": "REACT_APP_ANGERY_REACTS_SERVER_URL=https://angery-reacts-api.herokuapp.com/lyrics npm run build",
+    "deploy": "REACT_APP_ANGERY_REACTS_SERVER_URL=https://angery-reacts-api.herokuapp.com/lyrics gh-pages -d build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

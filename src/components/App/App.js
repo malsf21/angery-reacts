@@ -33,6 +33,7 @@ class App extends Component {
     };
     let url = process.env.REACT_APP_ANGERY_REACTS_SERVER_URL;
     if (url === undefined || url === null){
+      console.log("Error: couldn't get server URL. Will default to matt's instance.")
       url = "https://angery-reacts-api.herokuapp.com/lyrics";
     }
     fetch(url, {

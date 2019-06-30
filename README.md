@@ -47,4 +47,4 @@ A window should pop up automatically with the frontend running! If you run into 
 
 ## deploying to gh-pages
 
-Instead of using Travis CI like I normally do, I opted to use the `gh-pages` npm package. Configure the `homepage` key in `package.json` so React will know what URL to route from, and then just do `npm run deploy` or `yarn run deploy` - everything should work out of the box!
+Instead of using Travis CI like I normally do, I opted to use the `gh-pages` npm package. Configure the `homepage` key in `package.json` so React will know what URL to route from, and change the environment variable prepended to `npm run deploy` and `npm run predeploy` - then just do `npm run deploy` or `yarn run deploy` - everything should work out of the box!
