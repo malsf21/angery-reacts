@@ -31,7 +31,7 @@ class App extends Component {
       "title": title, 
       "artist": artist
     };
-    let url = "http://localhost:5000/lyrics";
+    let url = process.env.REACT_APP_ANGERY_REACTS_SERVER_URL;
     fetch(url, {
       method: 'POST',
       body: JSON.stringify(data),
@@ -42,9 +42,7 @@ class App extends Component {
     .then(response => {
       if (response["error"] !== "song not found!"){
         let sentimentResult = sentiment.analyze(response.lyrics);
-        console.log(sentimentResult);
         response["sentiment"] = sentimentResult;
-        console.log(response)
         let newSongs = this.state.songs;
         newSongs.unshift(response)
         this.setState({
@@ -97,7 +95,7 @@ class App extends Component {
           <Container>
             <Content className="has-text-centered">
               <p>
-                built by <a href="https://matthewwang.me" target="_blank" rel="noopener noreferrer">matt wang!</a>
+                built by <a href="https://matthewwang.me" target="_blank" rel="noopener noreferrer">matt wang!</a> check it out on <a href="https://github.com/malsf21/angery-reacts" target="_blank" rel="noopener noreferrer">github!</a>
               </p>
               <p>
                 uses <a href="https://reactjs.org" target="_blank" rel="noopener noreferrer">react</a>, <a href="https://bulma.io/" target="_blank" rel="noopener noreferrer">bulma</a>, <a href="https://www.npmjs.com/package/sentiment" target="_blank" rel="noopener noreferrer">sentiment</a>, and the <a href="https://docs.genius.com/" target="_blank" rel="noopener noreferrer">genius api</a>

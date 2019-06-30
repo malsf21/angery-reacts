@@ -17,7 +17,6 @@ class SongBox extends Component {
             showLyrics: false,
             showAnalysis: false
         }
-        console.log(this.props.songInfo.lyrics);
     }
     createTaggedLyrics = () => {
         let cleanedLyrics = sanitize(this.props.songInfo.lyrics);
