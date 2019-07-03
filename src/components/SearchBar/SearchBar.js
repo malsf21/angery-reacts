@@ -5,12 +5,13 @@ import { Field, Control, Input } from 'react-bulma-components/lib/components/for
 import Button from 'react-bulma-components/lib/components/button';
 import Loader from 'react-bulma-components/lib/components/loader';
 
-class SearchSong extends Component {
+class SearchBar extends Component {
     constructor(props){
         super(props);
         this.state = {
             artist: "",
-            title: ""
+            title: "",
+            playlist: ""
         }
     }
     handleArtistChange = e => {
@@ -19,10 +20,16 @@ class SearchSong extends Component {
     handleTitleChange = e => {
         this.setState({title: e.target.value});
     }
-    handleSubmit = () => {
-        this.props.handleSongSubmit(this.state.title, this.state.artist)
+    handlePlaylistChange = e => {
+        this.setState({playlist: e.target.value});
     }
-    renderSubmitButton = () => {
+    handleSongSubmit = () => {
+        this.props.handleSongSubmit(this.state.title, this.state.artist);
+    }
+    handlePlaylistSubmit = () => {
+        this.props.handlePlaylistSubmit(this.state.playlist);
+    }
+    renderSongSubmitButton = () => {
         if (this.props.loading){
             return(
                 <Loader />
@@ -30,7 +37,21 @@ class SearchSong extends Component {
         }
         else{
             return(
-                <Button color="success" onClick={this.handleSubmit}>
+                <Button color="success" onClick={this.handleSongSubmit}>
+                    search
+                </Button>
+            );
+        }
+    }
+    renderPlaylistSubmitButton = () => {
+        if (this.props.loading){
+            return(
+                <Loader />
+            );
+        }
+        else{
+            return(
+                <Button color="success" onClick={this.handlePlaylistSubmit}>
                     search
                 </Button>
             );
@@ -55,7 +76,19 @@ class SearchSong extends Component {
                         </Field>
                     </Level.Item>
                     <Level.Item>
-                       {this.renderSubmitButton()}
+                       {this.renderSongSubmitButton()}
+                    </Level.Item>
+                </Level.Side>
+                <Level.Side align="right">
+                    <Level.Item>
+                        <Field>
+                            <Control>
+                                <Input placeholder="spotify playlist id" value={this.state.playlist} onChange={this.handlePlaylistChange} />
+                            </Control>
+                        </Field>
+                    </Level.Item>
+                    <Level.Item>
+                       {this.renderPlaylistSubmitButton()}
                     </Level.Item>
                 </Level.Side>
             </Level>
@@ -63,4 +96,4 @@ class SearchSong extends Component {
 	}
 }
 
-export default SearchSong;
+export default SearchBar;
