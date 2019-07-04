@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+import Box from 'react-bulma-components/lib/components/box';
 import Heading from 'react-bulma-components/lib/components/heading';
 import SongBox from "../SongBox/SongBox";
 
@@ -14,6 +15,9 @@ class SongsList extends Component {
             <div>
                 {
                     this.props.songs.map((element, i) => {
+                        if ('error' in element){
+                            return <Box>Couldn't find song :(</Box>
+                        }
                         return (
                             <SongBox 
                                 songInfo={element}
