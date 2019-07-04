@@ -7,6 +7,7 @@ import Footer from 'react-bulma-components/lib/components/footer';
 import Heading from 'react-bulma-components/lib/components/heading';
 import Hero from 'react-bulma-components/lib/components/hero';
 import Section from 'react-bulma-components/lib/components/section';
+import Tag from 'react-bulma-components/lib/components/tag';
 
 import SearchBar from '../SearchBar/SearchBar';
 import SongsList from '../SongsList/SongsList';
@@ -21,7 +22,9 @@ class App extends Component {
     this.state = {
       loading: false,
       error: "",
-      songs: []
+      songs: [],
+      score: 0,
+      tokens: 0
     }
   }
 
@@ -32,7 +35,9 @@ class App extends Component {
     newSongs.unshift(songObject)
     this.setState({
       songs: newSongs,
-      error: ""
+      error: "",
+      score: this.state.score + sentimentResult.score,
+      tokens: this.state.tokens + sentimentResult.tokens.length
     });
   }
 
@@ -122,14 +127,23 @@ class App extends Component {
               handleSongSubmit={(title, artist) => this.handleSongSubmit(title, artist)}
               handlePlaylistSubmit={(playlist) => this.handlePlaylistSubmit(playlist)}
             ></SearchBar>
+            <Heading subtitle className="has-text-danger">
+              {this.state.error}
+            </Heading>
+            <hr />
+            <Tag.Group>
+              {
+                  this.state.score === 0 ? <Tag className="is-large">neutral vibes</Tag> : this.state.score > 0 ? <Tag className="is-large" color="success">good vibes</Tag> : <Tag  className="is-large" color="danger">angery/sad reacts</Tag>
+              }
+              <Tag className="is-large"><span>comparative:</span><strong>{this.state.tokens === 0 ? 0 : (this.state.score/this.state.tokens).toFixed(4)}</strong></Tag>
+              <Tag className="is-large"><span>raw score:</span><strong>{this.state.score}</strong></Tag>
+            </Tag.Group>
+            <hr />
             <p>
-              <b>raw score</b>: a sum of all the weights of the words in a song (where a positive weight is a positive word, and negative is negative)
+              <b>raw score</b>: a sum of all the weights of the words in a song (positive weight == positive feeling)
               <br />
               <b>comparative</b>: raw score divided by total number of words in song, ranges from -5.0 to 5.0
             </p>
-            <Heading subtitle color="danger">
-                {this.state.error}
-            </Heading>
             <hr />
             <SongsList songs={this.state.songs}></SongsList>
           </Container>

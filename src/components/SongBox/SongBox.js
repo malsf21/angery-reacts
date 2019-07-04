@@ -50,7 +50,7 @@ class SongBox extends Component {
                             <Heading>{this.props.songInfo.title} <span className="has-text-weight-normal">by {this.props.songInfo.artist}</span></Heading>
                             <Tag.Group>
                                 {
-                                    this.props.songInfo.sentiment.score > 0 ? <Tag color="success">good vibes</Tag> : <Tag color="danger">angery/sad reacts</Tag>
+                                    this.props.songInfo.sentiment.score === 0 ? <Tag className="is-large">neutral vibes</Tag> : this.props.songInfo.sentiment.score > 0 ? <Tag color="success">good vibes</Tag> : <Tag color="danger">angery/sad reacts</Tag>
                                 }
                                 <Tag><span>comparative:</span><strong>{this.props.songInfo.sentiment.comparative.toFixed(4)}</strong></Tag>
                                 <Tag><span>raw score:</span><strong>{this.props.songInfo.sentiment.score}</strong></Tag>
