@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/angery-reacts/static/css/main.13142143.chunk.css",
-    "main.js": "/angery-reacts/static/js/main.4d91093d.chunk.js",
-    "main.js.map": "/angery-reacts/static/js/main.4d91093d.chunk.js.map",
-    "runtime-main.js": "/angery-reacts/static/js/runtime-main.75f3aada.js",
-    "runtime-main.js.map": "/angery-reacts/static/js/runtime-main.75f3aada.js.map",
-    "static/css/2.657398c6.chunk.css": "/angery-reacts/static/css/2.657398c6.chunk.css",
-    "static/js/2.5f62a629.chunk.js": "/angery-reacts/static/js/2.5f62a629.chunk.js",
-    "static/js/2.5f62a629.chunk.js.map": "/angery-reacts/static/js/2.5f62a629.chunk.js.map",
+    "main.css": "/angery-reacts/static/css/main.c4468292.chunk.css",
+    "main.js": "/angery-reacts/static/js/main.b43e0eeb.chunk.js",
+    "main.js.map": "/angery-reacts/static/js/main.b43e0eeb.chunk.js.map",
+    "runtime-main.js": "/angery-reacts/static/js/runtime-main.cfe380aa.js",
+    "runtime-main.js.map": "/angery-reacts/static/js/runtime-main.cfe380aa.js.map",
+    "static/css/2.d55b1d75.chunk.css": "/angery-reacts/static/css/2.d55b1d75.chunk.css",
+    "static/js/2.ba312761.chunk.js": "/angery-reacts/static/js/2.ba312761.chunk.js",
+    "static/js/2.ba312761.chunk.js.map": "/angery-reacts/static/js/2.ba312761.chunk.js.map",
     "index.html": "/angery-reacts/index.html",
-    "precache-manifest.6b567d97953aff5415e40b1ae830e644.js": "/angery-reacts/precache-manifest.6b567d97953aff5415e40b1ae830e644.js",
+    "precache-manifest.63b6322514840bc74f873a0ba21a994b.js": "/angery-reacts/precache-manifest.63b6322514840bc74f873a0ba21a994b.js",
     "service-worker.js": "/angery-reacts/service-worker.js",
-    "static/css/2.657398c6.chunk.css.map": "/angery-reacts/static/css/2.657398c6.chunk.css.map",
-    "static/css/main.13142143.chunk.css.map": "/angery-reacts/static/css/main.13142143.chunk.css.map",
-    "static/js/2.5f62a629.chunk.js.LICENSE": "/angery-reacts/static/js/2.5f62a629.chunk.js.LICENSE"
+    "static/css/2.d55b1d75.chunk.css.map": "/angery-reacts/static/css/2.d55b1d75.chunk.css.map",
+    "static/css/main.c4468292.chunk.css.map": "/angery-reacts/static/css/main.c4468292.chunk.css.map",
+    "static/js/2.ba312761.chunk.js.LICENSE.txt": "/angery-reacts/static/js/2.ba312761.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.75f3aada.js",
-    "static/css/2.657398c6.chunk.css",
-    "static/js/2.5f62a629.chunk.js",
-    "static/css/main.13142143.chunk.css",
-    "static/js/main.4d91093d.chunk.js"
+    "static/js/runtime-main.cfe380aa.js",
+    "static/css/2.d55b1d75.chunk.css",
+    "static/js/2.ba312761.chunk.js",
+    "static/css/main.c4468292.chunk.css",
+    "static/js/main.b43e0eeb.chunk.js"
   ]
 }
