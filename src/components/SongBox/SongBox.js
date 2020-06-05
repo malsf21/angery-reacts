@@ -25,10 +25,10 @@ class SongBox extends Component {
         let words = cleanedLyrics.split(" ");
         let taggedLyrics = "";
         for (let i = 0; i < words.length; i++){
-            if (this.props.songInfo.sentiment.positive.includes(words[i])){
+            if (this.props.songInfo.sentiment.positive.includes(words[i].toLowerCase())){
                 taggedLyrics += "<span class='has-text-weight-bold has-text-success'>" + words[i] + "</span>";
             }
-            else if (this.props.songInfo.sentiment.negative.includes(words[i])){
+            else if (this.props.songInfo.sentiment.negative.includes(words[i].toLowerCase())){
                 taggedLyrics += "<span class='has-text-weight-bold has-text-danger'>" + words[i] + "</span>";
             }
             else{
