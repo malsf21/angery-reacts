@@ -29,7 +29,7 @@ class App extends Component {
   }
 
   addSong = songObject => {
-    let sentimentResult = sentiment.analyze(songObject.lyrics.toLowercase());
+    let sentimentResult = sentiment.analyze(songObject.lyrics.toLowerCase());
     songObject.sentiment = sentimentResult;
     let newSongs = this.state.songs;
     newSongs.unshift(songObject)
