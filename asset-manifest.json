@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/angery-reacts/static/css/main.d55aaa5f.chunk.css",
-    "main.js": "/angery-reacts/static/js/main.5e130df8.chunk.js",
-    "main.js.map": "/angery-reacts/static/js/main.5e130df8.chunk.js.map",
+    "main.js": "/angery-reacts/static/js/main.30d422a9.chunk.js",
+    "main.js.map": "/angery-reacts/static/js/main.30d422a9.chunk.js.map",
     "runtime-main.js": "/angery-reacts/static/js/runtime-main.10b424d6.js",
     "runtime-main.js.map": "/angery-reacts/static/js/runtime-main.10b424d6.js.map",
     "static/css/2.a5c3b5b1.chunk.css": "/angery-reacts/static/css/2.a5c3b5b1.chunk.css",
     "static/js/2.30c0819a.chunk.js": "/angery-reacts/static/js/2.30c0819a.chunk.js",
     "static/js/2.30c0819a.chunk.js.map": "/angery-reacts/static/js/2.30c0819a.chunk.js.map",
     "index.html": "/angery-reacts/index.html",
-    "precache-manifest.65f93c337d2134b8b905dba6f24135bb.js": "/angery-reacts/precache-manifest.65f93c337d2134b8b905dba6f24135bb.js",
+    "precache-manifest.4009c5c8839094cc9a1ed746e9fd0273.js": "/angery-reacts/precache-manifest.4009c5c8839094cc9a1ed746e9fd0273.js",
     "service-worker.js": "/angery-reacts/service-worker.js",
     "static/css/2.a5c3b5b1.chunk.css.map": "/angery-reacts/static/css/2.a5c3b5b1.chunk.css.map",
     "static/css/main.d55aaa5f.chunk.css.map": "/angery-reacts/static/css/main.d55aaa5f.chunk.css.map",
@@ -20,6 +20,6 @@
     "static/css/2.a5c3b5b1.chunk.css",
     "static/js/2.30c0819a.chunk.js",
     "static/css/main.d55aaa5f.chunk.css",
-    "static/js/main.5e130df8.chunk.js"
+    "static/js/main.30d422a9.chunk.js"
   ]
 }
