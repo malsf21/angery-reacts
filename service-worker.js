@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/angery-reacts/precache-manifest.212a450695d579b59a5bec7d9d6a6329.js"
+  "/angery-reacts/precache-manifest.65f93c337d2134b8b905dba6f24135bb.js"
 );
 
 self.addEventListener('message', (event) => {
