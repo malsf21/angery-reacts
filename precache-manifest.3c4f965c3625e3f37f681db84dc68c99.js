@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "b02d4ee35be88dcb1c84b6265208eec1",
+    "revision": "0ff929c88948773b0ff6edf4aa76ab9c",
     "url": "/angery-reacts/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/angery-reacts/static/css/2.a5c3b5b1.chunk.css"
   },
   {
-    "revision": "4b542fc04ceca68dcdc3",
+    "revision": "a162f3a61b800a382736",
     "url": "/angery-reacts/static/css/main.d55aaa5f.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/angery-reacts/static/js/2.30c0819a.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "4b542fc04ceca68dcdc3",
-    "url": "/angery-reacts/static/js/main.30d422a9.chunk.js"
+    "revision": "a162f3a61b800a382736",
+    "url": "/angery-reacts/static/js/main.4bd81821.chunk.js"
   },
   {
     "revision": "3c9e34ebe3759f5ba2ac",
