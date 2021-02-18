@@ -77,7 +77,7 @@ class App extends Component {
   handleSongSubmit = (title, artist) => {
     this.setState({loading: true});
     let data = {
-      "title": title, 
+      "title": title,
       "artist": artist
     };
     let url = process.env.REACT_APP_ANGERY_REACTS_SERVER_URL + "/lyrics";
@@ -122,8 +122,8 @@ class App extends Component {
         </Hero>
         <Section>
           <Container>
-            <SearchBar 
-              loading={this.state.loading} 
+            <SearchBar
+              loading={this.state.loading}
               handleSongSubmit={(title, artist) => this.handleSongSubmit(title, artist)}
               handlePlaylistSubmit={(playlist) => this.handlePlaylistSubmit(playlist)}
             ></SearchBar>
@@ -152,7 +152,7 @@ class App extends Component {
           <Container>
             <Content className="has-text-centered">
               <p>
-                built by <a href="https://matthewwang.me" target="_blank" rel="noopener noreferrer">matt wang!</a> check it out on <a href="https://github.com/malsf21/angery-reacts" target="_blank" rel="noopener noreferrer">github!</a>
+                built by <a href="https://matthewwang.me" target="_blank" rel="noopener noreferrer">matt wang!</a> check it out on <a href="https://github.com/mattxwang/angery-reacts" target="_blank" rel="noopener noreferrer">github!</a>
               </p>
               <p>
                 uses <a href="https://reactjs.org" target="_blank" rel="noopener noreferrer">react</a>, <a href="https://bulma.io/" target="_blank" rel="noopener noreferrer">bulma</a>, <a href="https://www.npmjs.com/package/sentiment" target="_blank" rel="noopener noreferrer">sentiment</a>, and the <a href="https://docs.genius.com/" target="_blank" rel="noopener noreferrer">genius api</a>
